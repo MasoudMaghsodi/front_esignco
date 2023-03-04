@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:front_esignco/constants/constants.dart';
 import 'package:front_esignco/list_profile.dart';
+import 'appbar.dart';
 
 class Account extends StatelessWidget {
   const Account({Key? key}) : super(key: key);
@@ -24,69 +25,9 @@ class Account extends StatelessWidget {
         body: SingleChildScrollView(
           child: Stack(
             children: [
-              Container(
-                height: 112.0,
-                width: 400,
-                decoration: BoxDecoration(
-                  color: purple,
-                  borderRadius: BorderRadius.only(
-                    bottomLeft: Radius.circular(30.0),
-                    bottomRight: Radius.circular(30.0),
-                  ),
-                ),
-                child: Container(
-                  alignment: Alignment.topCenter,
-                  margin: EdgeInsets.only(top: 16.0, left: 4.0, right: 4.0),
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [
-                      Row(
-                        children: [
-                          Container(
-                            child: IconButton(
-                              onPressed: () {},
-                              icon: Icon(
-                                Icons.arrow_back,
-                                color: Colors.white,
-                              ),
-                            ),
-                          ),
-                          Container(
-                            child: IconButton(
-                              onPressed: () {},
-                              icon: Image.asset("images/logo.png"),
-                            ),
-                          )
-                        ],
-                      ),
-                      Row(
-                        children: [
-                          Container(
-                            child: IconButton(
-                              onPressed: () {},
-                              icon: Icon(
-                                Icons.shopping_cart_outlined,
-                                color: Colors.white,
-                              ),
-                            ),
-                          ),
-                          Container(
-                            child: IconButton(
-                              onPressed: () {},
-                              icon: Icon(
-                                Icons.person_outlined,
-                                color: Colors.white,
-                              ),
-                            ),
-                          )
-                        ],
-                      )
-                    ],
-                  ),
-                ),
-              ),
+              Appbar(),
               SizedBox(
-                height: 670,
+                height: 620,
                 child: Card(
                   margin: EdgeInsets.only(
                       top: 75.0, left: 20.0, right: 20.0, bottom: 75.0),
@@ -95,40 +36,43 @@ class Account extends StatelessWidget {
                       Radius.circular(20.0),
                     ),
                   ),
-                  child: Column(
-                    children: [
-                      Container(
-                        height: 1.0,
-                        color: Colors.black12,
-                        margin: EdgeInsets.only(top: 80.0),
-                      ),
-                      ListProfile(),
-                      Container(
-                        height: 1.0,
-                        color: Colors.black12,
-                        margin: EdgeInsets.only(top: 10.0, bottom: 10.0),
-                      ),
-                      SizedBox(
-                        height: 20.0,
-                      ),
-                      GestureDetector(
-                        onTap: () {},
-                        child: Row(
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          children: [
-                            Icon(
-                              Icons.logout,
-                              color: red,
-                            ),
-                            Text(
-                              "خروج از حساب کاربری",
-                              style: TextStyle(
-                                  color: red, fontFamily: "Iranyekan"),
-                            )
-                          ],
+                  child: SingleChildScrollView(
+                    scrollDirection: Axis.vertical,
+                    child: Column(
+                      children: [
+                        Container(
+                          height: 1.0,
+                          color: Colors.black12,
+                          margin: EdgeInsets.only(top: 80.0),
                         ),
-                      )
-                    ],
+                        ListProfile(),
+                        Container(
+                          height: 1.0,
+                          color: Colors.black12,
+                          margin: EdgeInsets.only(top: 10.0),
+                        ),
+                        SizedBox(
+                          height: 20.0,
+                        ),
+                        GestureDetector(
+                          onTap: () {},
+                          child: Row(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            children: [
+                              Icon(
+                                Icons.logout,
+                                color: red,
+                              ),
+                              Text(
+                                "خروج از حساب کاربری",
+                                style: TextStyle(
+                                    color: red, fontFamily: "Iranyekan"),
+                              ),
+                            ],
+                          ),
+                        ),
+                      ],
+                    ),
                   ),
                 ),
               ),
