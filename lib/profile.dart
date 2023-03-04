@@ -27,7 +27,7 @@ class Account extends StatelessWidget {
             children: [
               Appbar(),
               SizedBox(
-                height: 620,
+                height: 645,
                 child: Card(
                   margin: EdgeInsets.only(
                       top: 75.0, left: 20.0, right: 20.0, bottom: 75.0),
@@ -77,20 +77,23 @@ class Account extends StatelessWidget {
                 ),
               ),
               Center(
-                child: Container(
-                  margin: EdgeInsets.only(top: 25.0),
-                  decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(100),
-                      color: Colors.white),
-                  height: 90.0,
-                  width: 90.0,
-                  child: CircleAvatar(
-                    backgroundImage: AssetImage(
-                      "images/default-profile.png",
+                child: Padding(
+                  padding: EdgeInsets.only(top: 15.0),
+                  child: Container(
+                    margin: EdgeInsets.only(top: 25.0),
+                    decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(100),
+                        color: Colors.white),
+                    height: 90.0,
+                    width: 90.0,
+                    child: CircleAvatar(
+                      backgroundImage: AssetImage(
+                        "images/default-profile.png",
+                      ),
                     ),
                   ),
                 ),
-              )
+              ),
             ],
           ),
         ),

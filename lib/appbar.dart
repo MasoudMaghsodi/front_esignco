@@ -6,23 +6,22 @@ class Appbar extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Align(
-      child: Container(
-        height: 112.0,
-        width: MediaQuery.of(context).size.width,
-        decoration: BoxDecoration(
-          color: purple,
-          borderRadius: BorderRadius.only(
-            bottomLeft: Radius.circular(30.0),
-            bottomRight: Radius.circular(30.0),
-          ),
-        ),
+    return SafeArea(
+      child: Align(
         child: Container(
-          child: Column(
-            children: [
-              Padding(
-                padding: const EdgeInsets.only(top: 16),
-                child: Row(
+          height: 112.0,
+          width: MediaQuery.of(context).size.width,
+          decoration: BoxDecoration(
+            color: purple,
+            borderRadius: BorderRadius.only(
+              bottomLeft: Radius.circular(30.0),
+              bottomRight: Radius.circular(30.0),
+            ),
+          ),
+          child: Container(
+            child: Column(
+              children: [
+                Row(
                   children: [
                     IconButton(
                       onPressed: () {},
@@ -30,9 +29,6 @@ class Appbar extends StatelessWidget {
                         Icons.arrow_back,
                         color: Colors.white,
                       ),
-                    ),
-                    SizedBox(
-                      width: 20,
                     ),
                     IconButton(
                       onPressed: () {},
@@ -46,9 +42,6 @@ class Appbar extends StatelessWidget {
                         color: Colors.white,
                       ),
                     ),
-                    SizedBox(
-                      width: 20,
-                    ),
                     IconButton(
                       onPressed: () {},
                       icon: Icon(
@@ -58,8 +51,8 @@ class Appbar extends StatelessWidget {
                     ),
                   ],
                 ),
-              ),
-            ],
+              ],
+            ),
           ),
         ),
       ),
