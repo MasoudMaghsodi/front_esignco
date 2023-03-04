@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "108203635451",
+    "project_id": "front-esignco-94436",
+    "storage_bucket": "front-esignco-94436.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:108203635451:android:1360463e628c7da4b5365e",
+        "android_client_info": {
+          "package_name": "com.company.front_esignco"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "108203635451-sgjmhrgl15v9rbsp07ju5fhgpe06poj0.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCxJodZqc3-itA-Yxri3TMnSqib0Eyg8GA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "108203635451-sgjmhrgl15v9rbsp07ju5fhgpe06poj0.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
