@@ -93,7 +93,6 @@ class ListProfile extends StatelessWidget {
             "پشتیبانی",
             style: TextStyle(
               fontFamily: "Iranyekan",
-              fontSize: 14.0,
             ),
           ),
           trailing: Icon(
