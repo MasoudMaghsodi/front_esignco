@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
+import 'package:front_esignco/constants/bottombar.dart';
 import 'package:front_esignco/constants/constants.dart';
 import 'package:front_esignco/list_profile.dart';
-import 'appbar.dart';
+import 'constants/appbar.dart';
 
 class Account extends StatelessWidget {
   const Account({Key? key}) : super(key: key);
@@ -21,6 +22,7 @@ class Account extends StatelessWidget {
       ],
       locale: Locale("fa", "IR"),
       home: Scaffold(
+        bottomNavigationBar: BottomBar(),
         backgroundColor: background,
         body: SingleChildScrollView(
           child: Stack(

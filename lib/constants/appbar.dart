@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'constants/constants.dart';
+import 'constants.dart';
 
 class Appbar extends StatelessWidget {
   const Appbar({super.key});
