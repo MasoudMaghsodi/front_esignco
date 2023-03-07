@@ -27,7 +27,11 @@ class Account extends StatelessWidget {
         body: SingleChildScrollView(
           child: Stack(
             children: [
-              Appbar(),
+              Appbar(
+                height: 112.0,
+                bottomLeftCir: 30.0,
+                bottomRightCir: 30.0,
+              ),
               SizedBox(
                 height: 645,
                 child: Card(

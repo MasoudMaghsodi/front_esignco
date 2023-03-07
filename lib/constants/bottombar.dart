@@ -2,7 +2,6 @@
 
 import 'package:flutter/material.dart';
 import 'package:front_esignco/constants/constants.dart';
-import 'package:front_esignco/login.dart';
 
 class BottomBar extends StatefulWidget {
   BottomBar({super.key});

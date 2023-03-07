@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:front_esignco/profile.dart';
-import 'package:front_esignco/sednsmscode.dart';
+import 'homepage.dart';
 
 void main() {
   runApp(
@@ -15,7 +15,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: const SendCode(),
+      home: const HomePage(),
     );
   }
 }
