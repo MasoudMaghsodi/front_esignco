@@ -38,6 +38,7 @@ dependencies:
   firebase_core: ^2.7.0
   pin_code_fields: ^7.4.0
   http: ^0.13.5
+  carousel_slider: ^4.2.1
 
 dev_dependencies:
   flutter_test:
@@ -70,6 +71,10 @@ flutter:
     - images/default-profile.png
     - images/color-logo.png
     - images/enter-code.png
+    - images/design_carpet.png
+    - images/order_carpet.png
+    - images/search_carpet.png
+    - images/see_carpet.png
   #   - images/a_dot_ham.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see
