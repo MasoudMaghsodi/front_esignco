@@ -8,7 +8,7 @@ class GridPhoto extends StatelessWidget {
     return GridView.count(
       padding: EdgeInsets.only(left: 12, right: 12),
       crossAxisCount: 2,
-      //physics: NeverScrollableScrollPhysics(),
+      physics: NeverScrollableScrollPhysics(),
       children: [
         GridTile(
           child: Image.asset(

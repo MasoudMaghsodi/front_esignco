@@ -9,7 +9,7 @@ Future<http.Response> fetchData() {
 Future<List<dynamic>> fetchBannerData() async {
   var result = await http.get(Uri.parse(
       'https://ws.esignco.ir/api/v1/slider/banner?SliderType=slider&LandingPageId=home-landing'));
-  return json.decode(result.body)['data'];
+  return json.decode(result.body)['data']['landingPageId'];
 }
 
 class AutoGenerate {

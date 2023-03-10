@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter/src/widgets/placeholder.dart';
-import 'package:front_esignco/constants/constants.dart';
+import 'package:front_esignco/constants/colors.dart';
 import 'package:front_esignco/constants/textfield.dart';
 import 'package:hexcolor/hexcolor.dart';
 

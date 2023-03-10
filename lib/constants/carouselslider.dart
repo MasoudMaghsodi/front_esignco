@@ -24,7 +24,7 @@ class _ImageSliderState extends State<ImageSlider> {
           padEnds: false,
           height: 184.0,
           viewportFraction: 0.9,
-          enableInfiniteScroll: false,
+          // enableInfiniteScroll: false,
         ),
         itemCount: Images.length,
         itemBuilder: (context, index, realIndex) {

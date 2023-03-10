@@ -1,7 +1,6 @@
 // ignore_for_file: must_be_immutable
-
 import 'package:flutter/material.dart';
-import 'package:front_esignco/constants/constants.dart';
+import 'package:front_esignco/constants/colors.dart';
 
 class BottomBar extends StatefulWidget {
   BottomBar({super.key});

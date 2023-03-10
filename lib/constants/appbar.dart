@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'constants.dart';
+import 'colors.dart';
 
 class Appbar extends StatelessWidget {
   final double height;
@@ -74,35 +74,3 @@ class Appbar extends StatelessWidget {
     );
   }
 }
-
-
-// Row(
-//                     children: [
-                      // IconButton(
-                      //   onPressed: () {},
-                      //   icon: Icon(
-                      //     Icons.arrow_back,
-                      //     color: Colors.white,
-                      //   ),
-                      // ),
-                      // IconButton(
-                      //   onPressed: () {},
-                      //   icon: Image.asset("images/logo.png"),
-                      // ),
-                      // Expanded(child: SizedBox.shrink()),
-                      // IconButton(
-                      //   onPressed: () {},
-                      //   icon: Icon(
-                      //     Icons.shopping_cart_outlined,
-                      //     color: Colors.white,
-                      //   ),
-                      // ),
-                      // IconButton(
-                      //   onPressed: () {},
-                      //   icon: Icon(
-                      //     Icons.person_outlined,
-                      //     color: Colors.white,
-                      //   ),
-                      // ),
-//                     ],
-//                   ),

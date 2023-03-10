@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'constants/constants.dart';
+import '../../constants/colors.dart';
 
 class ListProfile extends StatelessWidget {
   const ListProfile({super.key});

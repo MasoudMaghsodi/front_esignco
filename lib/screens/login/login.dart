@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:front_esignco/constants/constants.dart';
+import 'package:front_esignco/constants/colors.dart';
 
 class LoginPage extends StatelessWidget {
   const LoginPage({super.key});
