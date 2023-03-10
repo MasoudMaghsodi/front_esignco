@@ -39,6 +39,7 @@ dependencies:
   pin_code_fields: ^7.4.0
   http: ^0.13.5
   carousel_slider: ^4.2.1
+  video_player: ^2.6.0
 
 dev_dependencies:
   flutter_test:
