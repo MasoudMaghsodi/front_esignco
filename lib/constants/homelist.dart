@@ -1,9 +1,17 @@
+import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:front_esignco/constants/colors.dart';
 
-class HomeList extends StatelessWidget {
+import 'aboutme.dart';
+
+class HomeList extends StatefulWidget {
   const HomeList({super.key});
 
+  @override
+  State<HomeList> createState() => _HomeListState();
+}
+
+class _HomeListState extends State<HomeList> {
   @override
   Widget build(BuildContext context) {
     return Column(
@@ -36,7 +44,11 @@ class HomeList extends StatelessWidget {
             ),
             shadowColor: purple,
           ),
-        )
+        ),
+        SizedBox(
+          height: 24,
+        ),
+        AboutMe(),
         // Container(
         //   height: 92.0,
         //   margin: EdgeInsets.symmetric(horizontal: 12.0, vertical: 4.0),

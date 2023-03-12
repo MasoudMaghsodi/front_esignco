@@ -40,6 +40,7 @@ dependencies:
   http: ^0.13.5
   carousel_slider: ^4.2.1
   video_player: ^2.6.0
+  simple_icons: ^7.10.0
 
 dev_dependencies:
   flutter_test:
