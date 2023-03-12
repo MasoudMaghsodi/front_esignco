@@ -58,7 +58,7 @@ class _HomePageState extends State<HomePage> {
               margin: EdgeInsets.only(top: 32.0, bottom: 13.280),
               padding: EdgeInsets.symmetric(horizontal: 12.0),
               child: Text(
-                "برترین های دهه فجر",
+                "برترین ها",
                 //textAlign: TextAlign.start,
                 // textDirection: TextDirection.rtl,
                 style: TextStyle(
@@ -81,12 +81,13 @@ class _HomePageState extends State<HomePage> {
                 ),
               ),
             ),
+            VideoPlayerExample(),
             //add video player
             Container(
               margin: EdgeInsets.symmetric(vertical: 32, horizontal: 12.0),
               alignment: Alignment.centerRight,
               child: Text(
-                'تخفیف فصل',
+                'قابل ویرایش ها',
                 style: TextStyle(
                   color: Colors.black,
                   fontFamily: "Iranyekan",

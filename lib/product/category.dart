@@ -1,5 +1,6 @@
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
+import 'package:video_player/video_player.dart';
 
 class CategorySell extends StatefulWidget {
   const CategorySell({super.key});
@@ -10,36 +11,15 @@ class CategorySell extends StatefulWidget {
 
 class _CategorySellState extends State<CategorySell> {
   final List<String> Images = [
-    'https://minio.esignco.ir/esign-files/shop/products/331/Y1GDWFLHVMKHK5OA7M.jpg',
-    'https://minio.esignco.ir/esign-files/shop/products/339/F1DND961GI7AU16A2B.jpg',
-    'https://minio.esignco.ir/esign-files/shop/products/340/M8QXUJW25CCCY9VKRI.jpg',
-    'https://minio.esignco.ir/esign-files/shop/products/346/WXE7PEAZB56GMUREKE.jpg'
+    'https://prodminio.esignco.ir/esign-files/shop/products/168/ZX7ITGK4V5TBOPE5O9.jpg',
+    'https://prodminio.esignco.ir/esign-files/shop/products/165/S7FMR00WX8E2HDO4HH.jpg',
+    'https://prodminio.esignco.ir/esign-files/shop/products/177/KGG8ZNGDG18UN2HKSC.jpg',
+    'https://prodminio.esignco.ir/esign-files/shop/products/176/BWF5W136C1FNKM7O7G.jpg',
+    'https://prodminio.esignco.ir/esign-files/shop/products/166/J0FVJL5WK5S2VXYOQI.jpg',
   ];
   @override
   Widget build(BuildContext context) {
-    return
-        // Container(
-        //   height: 553.466,
-        //   width: 406.897,
-        //   child: Column(
-        //     crossAxisAlignment: CrossAxisAlignment.stretch,
-        //     children: [
-        //       Container(
-        //         width: 382.897,
-        //         margin: EdgeInsets.only(top: 32.0, bottom: 13.280),
-        //         padding: EdgeInsets.only(left: 12, right: 12),
-        //         child: Text(
-        //           "برترین های دهه فجر",
-        //           textAlign: TextAlign.start,
-        //           textDirection: TextDirection.rtl,
-        //           style: TextStyle(
-        //             color: Colors.black,
-        //             fontFamily: "Iranyekan",
-        //             fontSize: 16,
-        //           ),
-        //         ),
-        //       ),
-        CarouselSlider.builder(
+    return CarouselSlider.builder(
       options: CarouselOptions(
         height: 420.0,
         disableCenter: true,
@@ -52,9 +32,6 @@ class _CategorySellState extends State<CategorySell> {
         return buildImage(firstImage, index);
       },
     );
-    //     ],
-    //   ),
-    // );
   }
 
   Widget buildImage(String Images, int index) {
@@ -65,9 +42,7 @@ class _CategorySellState extends State<CategorySell> {
           child: Container(
             height: 360,
             width: 240,
-            //width: MediaQuery.of(context).size.width,
             margin: EdgeInsets.symmetric(horizontal: 4.0),
-            //padding: EdgeInsets.only(right: 5.0, left: 5.0, top: 10.0),
             child: Image.network(
               Images,
               fit: BoxFit.fitHeight,
@@ -80,7 +55,7 @@ class _CategorySellState extends State<CategorySell> {
           margin: EdgeInsets.symmetric(horizontal: 4.0),
           padding: EdgeInsets.only(right: 5.0, left: 5.0),
           child: Text(
-            'فرش افشان',
+            'فرش ماشینی ایزاین کد 201704',
             style: TextStyle(
               color: Colors.black,
               fontFamily: "Iranyekan",
@@ -94,7 +69,7 @@ class _CategorySellState extends State<CategorySell> {
           margin: EdgeInsets.symmetric(horizontal: 4.0),
           padding: EdgeInsets.only(right: 5.0, left: 5.0),
           child: Text(
-            'تومان 125,000,000 ',
+            'متری 1,600,000 تومان ',
             style: TextStyle(
               color: Colors.black54,
               fontFamily: "Iranyekan",
@@ -103,6 +78,56 @@ class _CategorySellState extends State<CategorySell> {
           ),
         )
       ],
+    );
+  }
+}
+
+class VideoPlayerExample extends StatefulWidget {
+  const VideoPlayerExample({Key? key}) : super(key: key);
+
+  @override
+  State<VideoPlayerExample> createState() => _VideoPlayerExampleState();
+}
+
+class _VideoPlayerExampleState extends State<VideoPlayerExample> {
+  late VideoPlayerController controller;
+  String videoUrl = 'https://www.w3schools.com/html/mov_bbb.mp4';
+
+  @override
+  void initState() {
+    super.initState();
+    controller = VideoPlayerController.network(videoUrl);
+
+    controller.addListener(() {
+      setState(() {});
+    });
+    controller.setLooping(true);
+    controller.initialize().then((_) => setState(() {}));
+    controller.play();
+  }
+
+  @override
+  void dispose() {
+    controller.dispose();
+    super.dispose();
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return Center(
+      child: InkWell(
+        onTap: () {
+          if (controller.value.isPlaying) {
+            controller.pause();
+          } else {
+            controller.play();
+          }
+        },
+        child: AspectRatio(
+          aspectRatio: controller.value.aspectRatio,
+          child: VideoPlayer(controller),
+        ),
+      ),
     );
   }
 }
