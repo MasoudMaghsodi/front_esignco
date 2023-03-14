@@ -40,13 +40,25 @@ class Appbar extends StatelessWidget {
                   Row(
                     children: [
                       IconButton(
-                        onPressed: () {
-                          Navigator.push(
-                              context,
-                              MaterialPageRoute(
-                                builder: (context) => Account(),
-                              ));
-                        },
+                        onPressed: currentRoute == Account()
+                            ? null
+                            : () => Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                  builder: (context) => Account(),
+                                )),
+                        // () {
+                        //   if (currentRoute == Account()) {
+                        //     return null;
+                        //   } else {
+                        //     Navigator.push(
+                        //         context,
+                        //         MaterialPageRoute(
+                        //           builder: (context) => Account(),
+                        //         ));
+
+                        //   }
+                        // },
                         icon: Icon(
                           Icons.person_outlined,
                           color: Colors.white,
@@ -65,16 +77,31 @@ class Appbar extends StatelessWidget {
                       ),
                       IconButton(
                         onPressed: () {
-                          if (currentRoute != 'secondRoute')
-                            Navigator.push(
-                                context,
-                                MaterialPageRoute(
-                                    builder: (context) => HomePage()));
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(builder: (context) => HomePage()),
+                          );
+                          //if (currentRoute != HomePage())
+                          // Navigator.push(
+                          //     context,
+                          //     MaterialPageRoute(
+                          //         builder: (context) => HomePage()));
+                          Navigator.of(
+                            context,
+                            rootNavigator: true,
+                          ).pop(
+                            context,
+                          );
                         },
                         icon: Image.asset("images/logo.png"),
                       ),
                       IconButton(
                         onPressed: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(builder: (context) => HomePage()),
+                          );
+
                           Navigator.of(
                             context,
                             rootNavigator: true,
