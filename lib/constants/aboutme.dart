@@ -38,162 +38,18 @@ class _AboutMeState extends State<AboutMe> {
           SizedBox(
             height: 10,
           ),
-          Container(
-            color: Colors.white,
-            width: 374.897,
-            height: 0.5,
-          ),
-          Container(
-            alignment: Alignment.centerRight,
-            width: 374.897,
-            height: 44.086,
-            child: RichText(
-              text: TextSpan(
-                recognizer: TapGestureRecognizer()
-                  ..onTap = () {
-                    setState(() {
-                      _isTapped = !_isTapped;
-                    });
-                  },
-                text: 'درباره ما',
-                style: TextStyle(
-                  color: _isTapped ? purple : Colors.white,
-                  fontFamily: 'iranyekan',
-                  fontSize: 14,
-                ),
-              ),
-            ),
-          ),
-          Container(
-            color: Colors.white,
-            width: 374.897,
-            height: 0.5,
-          ),
-          Container(
-            alignment: Alignment.centerRight,
-            width: 374.897,
-            height: 44.086,
-            child: RichText(
-              text: TextSpan(
-                recognizer: TapGestureRecognizer()
-                  ..onTap = () {
-                    setState(() {
-                      _isTapped = !_isTapped;
-                    });
-                  },
-                text: 'تماس با ما',
-                style: TextStyle(
-                  color: _isTapped ? purple : Colors.white,
-                  fontFamily: 'iranyekan',
-                  fontSize: 14,
-                ),
-              ),
-            ),
-          ),
-          Container(
-            color: Colors.white,
-            width: 374.897,
-            height: 0.5,
-          ),
-          Container(
-            alignment: Alignment.centerRight,
-            width: 374.897,
-            height: 44.086,
-            child: RichText(
-              text: TextSpan(
-                recognizer: TapGestureRecognizer()
-                  ..onTap = () {
-                    setState(() {
-                      _isTapped = !_isTapped;
-                    });
-                  },
-                text: 'بافت فرش سفارشی',
-                style: TextStyle(
-                  color: _isTapped ? purple : Colors.white,
-                  fontFamily: 'iranyekan',
-                  fontSize: 14,
-                ),
-              ),
-            ),
-          ),
-          Container(
-            color: Colors.white,
-            width: 374.897,
-            height: 0.5,
-          ),
-          Container(
-            alignment: Alignment.centerRight,
-            width: 374.897,
-            height: 44.086,
-            child: RichText(
-              text: TextSpan(
-                recognizer: TapGestureRecognizer()
-                  ..onTap = () {
-                    setState(() {
-                      _isTapped = !_isTapped;
-                    });
-                  },
-                text: 'پاسخ به پرسش های متداول',
-                style: TextStyle(
-                  color: _isTapped ? purple : Colors.white,
-                  fontFamily: 'iranyekan',
-                  fontSize: 14,
-                ),
-              ),
-            ),
-          ),
-          Container(
-            color: Colors.white,
-            width: 374.897,
-            height: 0.5,
-          ),
-          Container(
-            alignment: Alignment.centerRight,
-            width: 374.897,
-            height: 44.086,
-            child: RichText(
-              text: TextSpan(
-                recognizer: TapGestureRecognizer()
-                  ..onTap = () {
-                    setState(() {
-                      _isTapped = !_isTapped;
-                    });
-                  },
-                text: 'قوانین و مقررات',
-                style: TextStyle(
-                  color: _isTapped ? purple : Colors.white,
-                  fontFamily: 'iranyekan',
-                  fontSize: 14,
-                ),
-              ),
-            ),
-          ),
-          Container(
-            color: Colors.white,
-            width: 374.897,
-            height: 0.5,
-          ),
-          Container(
-            alignment: Alignment.centerRight,
-            width: 374.897,
-            height: 44.086,
-            child: RichText(
-              text: TextSpan(
-                recognizer: TapGestureRecognizer()
-                  ..onTap = () {
-                    setState(() {
-                      _isTapped = !_isTapped;
-                    });
-                  },
-                text: 'ارتباط با ما',
-                style: TextStyle(
-                  color: _isTapped ? purple : Colors.white,
-                  fontFamily: 'iranyekan',
-                  fontSize: 14,
-                ),
-              ),
-            ),
-          ),
+          getUnderline(),
+          infoButton('درباره ما'),
+          getUnderline(),
+          infoButton('تماس با ما'),
+          getUnderline(),
+          infoButton('بافت فرش سفارشی'),
+          getUnderline(),
+          infoButton('پاسخ به پرسش های متداول'),
+          getUnderline(),
+          infoButton('قوانین و مقررات'),
+          getUnderline(),
+          infoButton('ارتباط با ما'),
           Column(
             crossAxisAlignment: CrossAxisAlignment.end,
             children: [
@@ -241,6 +97,37 @@ class _AboutMeState extends State<AboutMe> {
             ],
           ),
         ],
+      ),
+    );
+  }
+
+  Widget getUnderline() {
+    return Container(
+      color: Colors.white,
+      width: 374.897,
+      height: 0.5,
+    );
+  }
+
+  Widget infoButton(String text) {
+    return Container(
+      alignment: Alignment.centerRight,
+      width: 374.897,
+      height: 44.086,
+      child: GestureDetector(
+        onTap: () {
+          setState(() {
+            _isTapped = !_isTapped;
+          });
+        },
+        child: Text(
+          text,
+          style: TextStyle(
+            color: _isTapped ? purple : Colors.white,
+            fontFamily: 'iranyekan',
+            fontSize: 14,
+          ),
+        ),
       ),
     );
   }
