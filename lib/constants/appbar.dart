@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:front_esignco/main.dart';
 import 'package:front_esignco/screens/bottombar_page/homepage.dart';
 import 'package:front_esignco/screens/login/profile.dart';
 import 'colors.dart';
@@ -43,22 +42,11 @@ class Appbar extends StatelessWidget {
                         onPressed: currentRoute == Account()
                             ? null
                             : () => Navigator.push(
-                                context,
-                                MaterialPageRoute(
-                                  builder: (context) => Account(),
-                                )),
-                        // () {
-                        //   if (currentRoute == Account()) {
-                        //     return null;
-                        //   } else {
-                        //     Navigator.push(
-                        //         context,
-                        //         MaterialPageRoute(
-                        //           builder: (context) => Account(),
-                        //         ));
-
-                        //   }
-                        // },
+                                  context,
+                                  MaterialPageRoute(
+                                    builder: (context) => Account(),
+                                  ),
+                                ),
                         icon: Icon(
                           Icons.person_outlined,
                           color: Colors.white,
@@ -81,11 +69,6 @@ class Appbar extends StatelessWidget {
                             context,
                             MaterialPageRoute(builder: (context) => HomePage()),
                           );
-                          //if (currentRoute != HomePage())
-                          // Navigator.push(
-                          //     context,
-                          //     MaterialPageRoute(
-                          //         builder: (context) => HomePage()));
                           Navigator.of(
                             context,
                             rootNavigator: true,
