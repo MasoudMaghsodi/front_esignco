@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:front_esignco/screens/login/profile.dart';
 import 'colors.dart';
 
 class Appbar extends StatelessWidget {
@@ -35,7 +36,9 @@ class Appbar extends StatelessWidget {
                   Row(
                     children: [
                       IconButton(
-                        onPressed: () {},
+                        onPressed: () {
+                          Navigator.pushNamed(context, '/profile');
+                        },
                         icon: Icon(
                           Icons.person_outlined,
                           color: Colors.white,
@@ -57,7 +60,9 @@ class Appbar extends StatelessWidget {
                         icon: Image.asset("images/logo.png"),
                       ),
                       IconButton(
-                        onPressed: () {},
+                        onPressed: () {
+                          Navigator.pop(context);
+                        },
                         icon: Icon(
                           Icons.arrow_forward,
                           color: Colors.white,

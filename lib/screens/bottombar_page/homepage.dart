@@ -1,4 +1,3 @@
-import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:front_esignco/constants/appbar.dart';
 import 'package:front_esignco/constants/bottombar.dart';
@@ -6,9 +5,7 @@ import 'package:front_esignco/constants/carouselslider.dart';
 import 'package:front_esignco/constants/colors.dart';
 import 'package:front_esignco/constants/gridview.dart';
 import 'package:front_esignco/constants/homelist.dart';
-import 'package:front_esignco/constants/videoplayer.dart';
-
-import '../product/category.dart';
+import '../../product/category.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});

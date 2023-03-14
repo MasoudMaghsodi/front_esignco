@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:front_esignco/constants/bottombar.dart';
 import 'package:front_esignco/constants/colors.dart';
-import 'package:front_esignco/screens/login/list_profile.dart';
+import 'package:front_esignco/constants/list_profile.dart';
 import '../../constants/appbar.dart';
 
 class Account extends StatelessWidget {
