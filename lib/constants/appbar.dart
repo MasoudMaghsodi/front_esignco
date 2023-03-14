@@ -37,7 +37,11 @@ class Appbar extends StatelessWidget {
                     children: [
                       IconButton(
                         onPressed: () {
-                          Navigator.pushNamed(context, '/profile');
+                          Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                builder: (context) => Account(),
+                              ));
                         },
                         icon: Icon(
                           Icons.person_outlined,
