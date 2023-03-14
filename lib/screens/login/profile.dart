@@ -28,6 +28,7 @@ class Account extends StatelessWidget {
           child: Stack(
             children: [
               Appbar(
+                currentRoute: Account(),
                 height: 112.0,
                 bottomLeftCir: 30.0,
                 bottomRightCir: 30.0,

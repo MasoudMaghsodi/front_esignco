@@ -1,8 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:front_esignco/main.dart';
+import 'package:front_esignco/screens/bottombar_page/homepage.dart';
 import 'package:front_esignco/screens/login/profile.dart';
 import 'colors.dart';
 
 class Appbar extends StatelessWidget {
+  final Widget currentRoute;
   final double height;
   final double bottomLeftCir;
   final double bottomRightCir;
@@ -10,7 +13,8 @@ class Appbar extends StatelessWidget {
       {super.key,
       this.height = 0,
       this.bottomLeftCir = 0,
-      this.bottomRightCir = 0});
+      this.bottomRightCir = 0,
+      required this.currentRoute});
 
   @override
   Widget build(BuildContext context) {
@@ -60,12 +64,23 @@ class Appbar extends StatelessWidget {
                         child: SizedBox.shrink(),
                       ),
                       IconButton(
-                        onPressed: () {},
+                        onPressed: () {
+                          if (currentRoute != 'secondRoute')
+                            Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                    builder: (context) => HomePage()));
+                        },
                         icon: Image.asset("images/logo.png"),
                       ),
                       IconButton(
                         onPressed: () {
-                          Navigator.pop(context);
+                          Navigator.of(
+                            context,
+                            rootNavigator: true,
+                          ).pop(
+                            context,
+                          );
                         },
                         icon: Icon(
                           Icons.arrow_forward,

@@ -21,6 +21,7 @@ class _HomePageState extends State<HomePage> {
       backgroundColor: background,
       appBar: PreferredSize(
         child: Appbar(
+          currentRoute: HomePage(),
           height: 56,
           bottomLeftCir: 16,
           bottomRightCir: 16,
