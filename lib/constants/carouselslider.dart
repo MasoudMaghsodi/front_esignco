@@ -1,5 +1,8 @@
+import 'dart:convert';
+
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
+import 'package:front_esignco/network/slidermodel.dart';
 
 class ImageSlider extends StatefulWidget {
   const ImageSlider({super.key});
@@ -9,11 +12,8 @@ class ImageSlider extends StatefulWidget {
 }
 
 class _ImageSliderState extends State<ImageSlider> {
-  final List<String> Images = [
-    'images/1.png',
-    'images/2.png',
-    'images/3.png',
-  ];
+  Carousel ImageSlider = Carousel(id: '', image: 'images/1.png');
+
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -26,9 +26,9 @@ class _ImageSliderState extends State<ImageSlider> {
           viewportFraction: 0.9,
           enableInfiniteScroll: false,
         ),
-        itemCount: Images.length,
+        itemCount: ImageSlider.length,
         itemBuilder: (context, index, realIndex) {
-          final firstImage = Images[index];
+          final firstImage = ImageSlider[index];
 
           return buildImage(firstImage, index);
         },

@@ -41,6 +41,8 @@ dependencies:
   carousel_slider: ^4.2.1
   video_player: ^2.6.0
   simple_icons: ^7.10.0
+  get: ^4.6.5
+  get_storage: ^2.0.2
 
 dev_dependencies:
   flutter_test:
