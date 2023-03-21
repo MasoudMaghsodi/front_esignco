@@ -20,9 +20,7 @@ class _HomePageState extends State<HomePage> {
           SizedBox(
             height: 20.0,
           ),
-          ImageSlider(
-            title: '',
-          ),
+          ImageSlider(),
           SizedBox(
             height: 50.0,
           ),

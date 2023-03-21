@@ -9,20 +9,20 @@ Future<http.Response> fetchData() {
 Future<List<dynamic>> fetchBannerData() async {
   var result = await http.get(Uri.parse(
       'https://ws.esignco.ir/api/v1/slider/banner?SliderType=slider&LandingPageId=home-landing'));
-  return json.decode(result.body)['data']['landingPageId'];
+  return json.decode(result.body);
 }
 
-class AutoGenerate {
-  AutoGenerate({
+class JsonBody {
+  JsonBody({
     required this.result,
     required this.data,
   });
   late final String result;
-  late final Data data;
+  late final JsonHomeBody data;
 
-  AutoGenerate.fromJson(Map<String, dynamic> json) {
+  JsonBody.fromJson(Map<String, dynamic> json) {
     result = json['result'];
-    data = Data.fromJson(json['data']);
+    data = JsonHomeBody.fromJson(json['data']);
   }
 
   Map<String, dynamic> toJson() {
@@ -33,21 +33,23 @@ class AutoGenerate {
   }
 }
 
-class Data {
-  Data({
+class JsonHomeBody {
+  JsonHomeBody({
     required this.searchParameter,
     required this.result,
     required this.totalCount,
     required this.filterCount,
   });
-  late final SearchParameter searchParameter;
-  late final List<Result> result;
+  late final JsonSearchBody searchParameter;
+  late final List<JsonHomeImage> result;
   late final int totalCount;
   late final int filterCount;
 
-  Data.fromJson(Map<String, dynamic> json) {
-    searchParameter = SearchParameter.fromJson(json['searchParameter']);
-    result = List.from(json['result']).map((e) => Result.fromJson(e)).toList();
+  JsonHomeBody.fromJson(Map<String, dynamic> json) {
+    searchParameter = JsonSearchBody.fromJson(json['searchParameter']);
+    result = List.from(json['result'])
+        .map((e) => JsonHomeImage.fromJson(e))
+        .toList();
     totalCount = json['totalCount'];
     filterCount = json['filterCount'];
   }
@@ -62,8 +64,8 @@ class Data {
   }
 }
 
-class SearchParameter {
-  SearchParameter({
+class JsonSearchBody {
+  JsonSearchBody({
     this.publishDate,
     this.sliderPublishType,
     required this.sliderType,
@@ -84,7 +86,7 @@ class SearchParameter {
   late final bool needTotalCount;
   late final String search;
 
-  SearchParameter.fromJson(Map<String, dynamic> json) {
+  JsonSearchBody.fromJson(Map<String, dynamic> json) {
     publishDate = null;
     sliderPublishType = null;
     sliderType = json['sliderType'];
@@ -111,8 +113,8 @@ class SearchParameter {
   }
 }
 
-class Result {
-  Result({
+class JsonHomeImage {
+  JsonHomeImage({
     required this.title,
     required this.url,
     required this.imageSmall,
@@ -155,7 +157,7 @@ class Result {
   late final String sliderPublishTypeName;
   late final String sliderTypeName;
 
-  Result.fromJson(Map<String, dynamic> json) {
+  JsonHomeImage.fromJson(Map<String, dynamic> json) {
     title = json['title'];
     url = json['url'];
     imageSmall = json['imageSmall'];
